@@ -26,14 +26,10 @@ export default class Article extends Component {
             </section>
         )
     }
-            //{this.getComment(article.comments)}
 
     getBody() {
         return this.state.isOpen && <div>{this.props.article.text}</div>
     }
-    // getComment(comment) {
-    //     return this.state.commentOpen && <CommentList comments={comment}/>
-    // }
 
     toggleOpen = (ev) => {
         this.setState({
