@@ -4,7 +4,7 @@ import React, {Component} from 'react'
 export default function Comment ({comment}){
 
     return (
-            <section>
+            <div>
                 <div className="commentAuthor">
                     <b>{comment.user}</b>
                 </div>
@@ -12,7 +12,7 @@ export default function Comment ({comment}){
                     {comment.text}
                 </div>
                     <hr/>
-            </section>
+            </div>
 
             )
 }
