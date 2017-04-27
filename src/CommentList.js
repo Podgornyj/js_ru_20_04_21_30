@@ -11,7 +11,8 @@ export default class CommentList extends Component {
         if(!comments){
             return (
                 <div>
-                    No Coments
+                    <div className="toggleComents" onClick={this.toggleOpenComment}>{this.state.commentOpen ? "Close Coments" : "Open Coments"}</div>
+                    <div>{this.state.commentOpen ? "No Coments": null}</div>
                 </div>
             )
         }
