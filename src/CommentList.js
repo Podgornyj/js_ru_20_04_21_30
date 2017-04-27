@@ -1,18 +1,33 @@
-import React from 'react'
+import React, {Component} from 'react'
 import Comment from './Comment'
 
-export default function CommentList({comments}) {
-    if(!comments){
+export default class CommentList extends Component {
+    state = {
+        commentOpen: false
+    }
+
+    render() {
+        const {comments} = this.props
+        if(!comments){
+            return (
+                <div>
+                    No Coments
+                </div>
+            )
+        }
+        const comment = comments.map((comment)=> <div key={comment.id}><Comment comment={comment}/></div>)
         return (
             <div>
-                No Coments
+                <div className="toggleComents" onClick={this.toggleOpenComment}>{this.state.commentOpen ? "Close Coments" : "Open Coments"}</div>
+                {this.state.commentOpen ? comment: null}
             </div>
         )
     }
-    const comment = comments.map((comment)=> <div key={comment.id}><Comment comment={comment}/></div>)
-    return (
-        <div>
-        {comment}
-        </div>
-    )
+
+    toggleOpenComment = (ev) => {
+        this.setState({
+            commentOpen: !this.state.commentOpen
+        })
+    }
+
 }

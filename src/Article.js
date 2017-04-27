@@ -11,9 +11,7 @@ export default class Article extends Component {
     }
 */
     state = {
-        isOpen: false,
-        //лучше внести этот стейт в CommentList, иначе компонент выходит очень прегруженным
-        commentOpen: false
+        isOpen: false
     }
 
     render() {
@@ -24,8 +22,7 @@ export default class Article extends Component {
                     {article.title}
                 </h2>
                 {this.getBody()}
-                <div className="toggleComents" onClick={this.toggleOpenComment}>{this.state.commentOpen ? "Close Coments" : "Open Coments"}</div>
-                {this.state.commentOpen ? <CommentList comments={article.comments}/>: null}
+                <CommentList comments={article.comments}/>
             </section>
         )
     }
@@ -43,9 +40,5 @@ export default class Article extends Component {
             isOpen: !this.state.isOpen,
         })
     }
-    toggleOpenComment = (ev) => {
-        this.setState({
-            commentOpen: !this.state.commentOpen
-        })
-    }
+
 }
