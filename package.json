@@ -7,16 +7,11 @@
     "start": "webpack-dev-server --hot --inline",
     "build": "webpack"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/romabelka/js_ru_20_04_21_30"
-  },
+
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/romabelka/js_ru_20_04_21_30"
-  },
-  "homepage": "https://github.com/romabelka/js_ru_20_04_21_30",
+
+
   "devDependencies": {
     "babel-core": "^6.13.2",
     "babel-loader": "^6.2.4",
