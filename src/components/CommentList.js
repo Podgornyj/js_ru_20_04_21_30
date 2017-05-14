@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import Comment from './Comment'
-import AddCommentForm from './AddCommentForm'
+import AddCommentForm from './CommentForm/AddCommentForm'
 import toggleOpen from '../decorators/toggleOpen'
 import PropTypes from 'prop-types'
 

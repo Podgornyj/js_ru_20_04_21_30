@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import './style.css'
 
 class AddCommentForm extends Component {
 
@@ -11,9 +12,9 @@ class AddCommentForm extends Component {
         return(
             <form>
                 Comment:<br/>
-                <input type="text" value={this.state.comment} onChange={this.handleChange('comment')} /><br/>
+                <input type="text" className={this.state.comment && this.state.comment.length < 10? 'notValid':''} value={this.state.comment} onChange={this.handleChange('comment')} /><br/>
                 User:<br/>
-                <input type="text" value={this.state.user} onChange={this.handleChange('user')} />
+                <input type="text" className={this.state.user && this.state.user.length < 10? 'notValid':''} value={this.state.user} onChange={this.handleChange('user')} />
             </form>
         )
     }
