@@ -18,9 +18,12 @@ class AddCommentForm extends Component {
         )
     }
 
-    handleChange = (type, ...a) =>{
-        console.log(type);
-        console.log(a);
+    handleChange = type => ev =>{
+        let value = ev.target.value
+        if(value.length > 20) return
+        this.setState({
+            [type]: value
+        })
     }
 }
 
