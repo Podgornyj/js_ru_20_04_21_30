@@ -7,8 +7,16 @@
     "start": "webpack-dev-server --hot --inline",
     "build": "webpack"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/romabelka/js_ru_20_04_21_30"
+  },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/romabelka/js_ru_20_04_21_30"
+  },
+  "homepage": "https://github.com/romabelka/js_ru_20_04_21_30",
   "devDependencies": {
     "babel-core": "^6.13.2",
     "babel-loader": "^6.2.4",
@@ -25,7 +33,6 @@
     "create-react-class": "^15.5.3",
     "prop-types": "^15.5.8",
     "react": "^15.5.0",
-    "react-day-picker": "^5.5.1",
     "react-dom": "^15.5.0",
     "react-select": "^1.0.0-rc.3",
     "react-transition-group": "^1.1.2"
