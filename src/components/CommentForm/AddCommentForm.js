@@ -9,6 +9,7 @@ class AddCommentForm extends Component {
     }
 
     render(){
+        //отлично, только в классах не принято cammelCase использовать
         return(
             <form>
                 Comment:<br/>
