@@ -29,7 +29,10 @@ class App extends Component {
                         onChange = {this.handleSelectionChange} multi />
                 <ArticleList articles = {this.props.articles} />
                 <Chart articles={this.props.articles} key={this.state.counter} />
+<<<<<<< HEAD
                 <DateRange/>
+=======
+>>>>>>> parent of 04e79d9... ht3
             </div>
         )
     }
