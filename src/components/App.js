@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import ArticleList from './ArticleList'
 import Chart from './Chart'
 import UserForm from './UserForm'
+import DateRange from './DateRange'
 import Select from 'react-select'
 import 'react-select/dist/react-select.css'
 
@@ -28,6 +29,7 @@ class App extends Component {
                         onChange = {this.handleSelectionChange} multi />
                 <ArticleList articles = {this.props.articles} />
                 <Chart articles={this.props.articles} key={this.state.counter} />
+                <DateRange/>
             </div>
         )
     }
